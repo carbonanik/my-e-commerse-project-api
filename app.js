@@ -14,3 +14,4 @@ app.listen(port, () => {
 });
 
 //https://mighty-crag-04913.herokuapp.com/api/product/recommended
+//https://mighty-crag-04913.herokuapp.com/images/0f61cb5dd19d38a11e5a9133333eca07.jpg
