@@ -12,3 +12,4 @@ app.listen(port, () => {
     console.log(`Server is running on port: ${port}`); 
 });
 
+//https://mighty-crag-04913.herokuapp.com/api/product/recommended
