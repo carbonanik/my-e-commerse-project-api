@@ -4,8 +4,18 @@ const ProductModel = require('../models/product')
 
 exports.getPopular = async (req, res) => {
     try {
+
         const products = await ProductModel.findAll({where: {type_id: 2}});
-        res.json(products);
+
+        let data = {
+            "total_size": products.length,
+            "type_id": 2,
+            "offset": 0,
+            "products": products
+        }
+
+        res.json(data);
+
     } catch (error){
         res.status(500).json({message: error.message});
     }
@@ -15,7 +25,15 @@ exports.getPopular = async (req, res) => {
 exports.getRecommended = async (req, res) => {
     try {
         const products = await ProductModel.findAll({where: {type_id: 3}});
-        res.json(products);
+
+        let data = {
+            "total_size": products.length,
+            "type_id": 3,
+            "offset": 0,
+            "products": products
+        }
+
+        res.json(data);
     } catch (error){
         res.status(500).json({message: error.message});
     }

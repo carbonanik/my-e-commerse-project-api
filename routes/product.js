@@ -9,7 +9,7 @@ const {
 
 router.get('/popular', getPopular);
 router.get('/recommended', getRecommended);
-router.get('/getAllProduct', getAllProducts);
-router.post('/addProduct', addProduct);
+router.get('/get-all', getAllProducts);
+router.post('/add', addProduct);
 
 module.exports = router;
