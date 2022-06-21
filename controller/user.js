@@ -30,7 +30,7 @@ exports.signup = async (req, res) => {
 
             // create token for user
             const token = jwt.sign({userId: user._id,},
-                process.env.ACCESS_TOCKEN_SECRET//, {expiresIn: '1d'}
+                process.env.JWT_SECRET//, {expiresIn: '1d'}
             )
 
             // hashing password
