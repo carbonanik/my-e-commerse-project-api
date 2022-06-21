@@ -210,6 +210,9 @@ exports.signin = async (req, res) => {
     }
 
 exports.signout = async (req, res) => {
+    if (!req.headers.authorization) {
+        return res.status(422).json({ message: "Not signed in" });
+    }
     const token = req.headers.authorization.split(" ")[1];
 
     if (!token) {
