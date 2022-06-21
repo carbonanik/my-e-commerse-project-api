@@ -11,8 +11,10 @@ app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors());
 
 const product = require('./routes/product');
+const user = require('./routes/user');
 
 app.use('/api/product', product);
+app.use('/api/user', user);
 app.use('/images', express.static('images'));
 
 db.authenticate()
