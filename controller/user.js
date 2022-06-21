@@ -29,9 +29,9 @@ exports.signup = async (req, res) => {
             }
 
             // create token for user
-            const token = jwt.sign({userId: user._id,},
-                process.env.JWT_SECRET//, {expiresIn: '1d'}
-            )
+            // const token = jwt.sign({userId: user._id,},
+            //     process.env.JWT_SECRET//, {expiresIn: '1d'}
+            // )
 
             // hashing password
             bcrypt.hash(password, 12).then((hashedPassword) => {
@@ -39,8 +39,8 @@ exports.signup = async (req, res) => {
                     name: name,
                     email: email,
                     phone: phone,
-                    password: hashedPassword,
-                    token: token
+                    password: hashedPassword//,
+                    // token: token
                 });
 
                 // savign user to database
