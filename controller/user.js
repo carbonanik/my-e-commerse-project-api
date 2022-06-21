@@ -49,7 +49,7 @@ exports.signup = async (req, res) => {
                     // sending successful response to client
                     res.status(201).json({
                             message: "User created successfully",
-                            token: user.token,
+                            // token: user.token,
                         });
                 })
                     .catch((error) => {
