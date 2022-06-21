@@ -6,6 +6,6 @@ const {
 } = require('../controller/user');
 
 router.get('/get-by-token', getUserByToken);
-router.get('/signup', signup);
+router.post('/signup', signup);
 
 module.exports = router;
